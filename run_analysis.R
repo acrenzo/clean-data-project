@@ -48,3 +48,4 @@ res <- summarise_each(grouped,funs(mean))
 
 ##show the data
 View(res)
+write.table(res, "cleaning_data.txt", row.name = FALSE)
