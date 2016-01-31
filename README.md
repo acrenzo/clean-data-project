@@ -20,4 +20,4 @@ It makes a new data frame making:
 
 ####How does It work?
 Follow the next steps:
-1. 
+1.
