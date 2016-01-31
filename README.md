@@ -6,6 +6,11 @@ The repo contain the follow files:
 * run_analysis.R
 * Readme.md
 * CodeBook.md
+ 
+#### File Description
+* run_analysis.R: Perform data transformation read "that it makes? and How does It work?".
+* Readme.md: desbribes of genal form the target of files.
+* CodeBook.md: Give an general description of the new data obtained.
 
 ####Data Source
 The data  was obtained from the next website: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -20,4 +25,6 @@ It makes a new data frame making:
 
 ####How does It work?
 Follow the next steps:
-1.
+* Download the file and unzip
+* Open R Console or RStudio and set the workspace inside the folder unzipped, using setwd() function
+* Run the run_analysis.R Script.
