@@ -1,6 +1,7 @@
 ## DATA DICTIONARY - 2016
+* y
 * subjectData
-  *
+  *data adf
 * timeBodyAcc.mean().X
 * timeBodyAcc.mean().Y
 * timeBodyAcc.mean().Z
