@@ -5,26 +5,26 @@ library(dplyr)
 x_train <- read.table("train/X_train.txt", header = FALSE)
 x_test <- read.table("test/X_test.txt", header = FALSE)
 
-## MERGE THE DATA OF TRAIN AND TEST BY ROWS AND ASSING TO XDATA FRAME
+## MERGE THE DATA OF TRAIN AND TEST BY ROWS AND assign TO XDATA FRAME
 xdata <- rbind(x_train, x_test)
 
 ##READ THE FEATURES NAMES THEN ASSIGN THE NAMES TO XDATA FRAME
 features <- read.table("features.txt", header =FALSE)
 names(xdata) <- features$V2
 
-## READ THE RESPONSE VAR Y OF TRAIN AND TEST AND MERGE FOR ROW AND ASSING NAME Y
+## READ THE RESPONSE VAR Y OF TRAIN AND TEST AND MERGE FOR ROW AND assign NAME Y
 y_train <- read.table("train/y_train.txt", header = FALSE)
 y_test <- read.table("test/y_test.txt", header = FALSE)
 ydata <- rbind(y_train, y_test)
 names(ydata) <- c("y")
 
-## READ THE SUBJECT VAR Y OF TRAIN AND TEST AND MERGE FOR ROW AND ASSING NAME SUBJECTDATA
+## READ THE SUBJECT VAR Y OF TRAIN AND TEST AND MERGE FOR ROW AND assign NAME SUBJECTDATA
 subject_train <- read.table("train/subject_train.txt", header=FALSE)
 subject_test <- read.table("test/subject_test.txt", header=FALSE)
 subjectdata <- rbind(subject_train, subject_test)
 names(subjectdata) <- c("subjectData")
 
-##FILTER THE NAMES OF XDATA JUST BY HAVE IN mean and std then assing the data to merge_data and join by column
+##FILTER THE NAMES OF XDATA JUST BY HAVE IN mean and std then assign the data to merge_data and join by column
 names_data <- grep("mean|std",names(xdata),value=TRUE)
 merge_data <- xdata[,names_data]
 merge_data <- cbind(merge_data, ydata, subjectdata)
@@ -39,7 +39,7 @@ levels(merge_data$y)[levels(merge_data$y)==4] <- as.character(activity_labels[4,
 levels(merge_data$y)[levels(merge_data$y)==5] <- as.character(activity_labels[5,2])
 levels(merge_data$y)[levels(merge_data$y)==6] <- as.character(activity_labels[6,2])
 
-##assing new names replacing f by frecuency and t by time
+##assign new names replacing f by frecuency and t by time
 names(merge_data) <- gsub("-",".",sub("^f","frecuency",sub("^t", "time", names(merge_data))))
 
 ##grouping by y and subjectData Vars
