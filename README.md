@@ -27,4 +27,4 @@ It makes a new data frame making:
 Follow the next steps:
 * Download the file and unzip
 * Open R Console or RStudio and set the workspace inside the folder unzipped, using setwd() function
-* Run the run_analysis.R Script.
+* Run the run_analysis.R Script, that's all the cleaning_data.txt file is in the current work directory
