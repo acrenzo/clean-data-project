@@ -10,7 +10,7 @@ The repo contain the follow files:
 #### File Description
 * run_analysis.R: Perform data transformation read "that it makes? and How does It work?".
 * Readme.md: desbribes of genal form the target of files.
-* CodeBook.md: Give an general description of the new data obtained.
+* CodeBook.md: Give an overall description of the new data obtained.
 
 ####Data Source
 The data  was obtained from the next website: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
